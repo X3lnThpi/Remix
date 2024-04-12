@@ -1,0 +1,14 @@
+runtime: nodejs18 # Replace with your desired version if needed
+instance_class: F2 # Adjust if desired
+
+handlers:
+  - url: /.*
+    script: auto 
+    secure: always
+
+# Optional: Basic scaling settings (adjust thresholds and instances)
+automatic_scaling:
+  min_idle_instances: 1  # Ensure at least one instance is always ready
+  max_pending_latency: 30ms # Adjust based on your traffic patterns
+
+
